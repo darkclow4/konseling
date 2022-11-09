@@ -1,5 +1,5 @@
 <template>
-    <div class="sidebar-container flex flex-col">
+    <div class="sidebar-container flex flex-col shrink-0">
         <div class="flex-col">
             <div class="sidebar-title">
                 <a href="/" class="text-white no-underline font-semibold">
@@ -10,17 +10,17 @@
         </div>
         <div class="flex flex-col justify-between grow mb-3 mt-4">
             <ul class="flex-col mt-4">
-                <li class="sidebar-li flex flex-row py-3 active">
-                    <a href="#" class="w-full flex items-center">
+                <li class="sidebar-li flex flex-row mb-3">
+                    <NuxtLink to="/home" class="w-full flex items-center py-3">
                         <img src="~/assets/img/icons/dashboard.png" alt="" class="ml-5 mr-1">
                         <span class="link-text">Dashboard</span>
-                    </a>
+                    </NuxtLink>
                 </li>
-                <li class="sidebar-li flex flex-row py-3">
-                    <a href="#" class="w-full flex items-center">
+                <li class="sidebar-li flex flex-row">
+                    <NuxtLink to="/konseling" class="w-full flex items-center py-3">
                         <img src="~/assets/img/icons/analytics.png" alt="" class="ml-4">
                         <span class="link-text">Konseling</span>
-                    </a>
+                    </NuxtLink>
                 </li>
             </ul>
             <div class="user-container cursor-pointer">
@@ -42,7 +42,8 @@
 </template>
 
 <script>
-
+export default {
+}
 </script>
 
 <style lang="scss" scoped>
@@ -79,7 +80,7 @@
     color: white;
 }
 
-.active {
+.nuxt-link-active {
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     color: white;
