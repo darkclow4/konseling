@@ -23,7 +23,7 @@
                     </NuxtLink>
                 </li>
             </ul>
-            <div class="user-container cursor-pointer">
+            <div class="user-container cursor-pointer" @click="toLogin">
                 <div>
                     <img src="https://github.com/mdo.png" alt="" width="36" height="36" class="rounded-full">
                 </div>
@@ -43,6 +43,11 @@
 
 <script>
 export default {
+    methods:{
+        toLogin() {
+            this.$router.push('/login')
+        }
+    }
 }
 </script>
 

@@ -8,7 +8,7 @@
         <form>
             <input type="email" class="form-input" placeholder="Username">
             <input type="password" class="form-input" placeholder="Password">
-            <button type="submit" class="form-btn">Login</button>
+            <button type="submit" class="form-btn" @click.prevent="toRole">Login</button>
         </form>
         <p class="font-medium mb-3" style="font-size: 11px; color: rgba(30, 30, 30, 0.3);">Belum punya akun?</p>
         <button class="btn-contact">
@@ -21,6 +21,11 @@
 <script>
 export default {
   layout: 'login_bg',
+  methods: {
+    toRole() {
+        this.$router.push('/role')
+    }
+  }
 }
 </script>
 
