@@ -43,14 +43,14 @@
                 <p class="label-font mt-1.5" style="color: #FE5F55;">* Wajib diisi</p>
             </div>
 
-            <button class="btn mx-auto">Buat Konseling</button>
+            <button @click="$emit('next-modal')" class="btn mx-auto">Buat Konseling</button>
         </div>
     </ModalsOverlay>
 </template>
 
 <script>
 export default {
-
+    
 }
 </script>
 

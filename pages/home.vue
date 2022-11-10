@@ -3,8 +3,8 @@
         <div class="flex flex-col flex-auto">
             <div class="flex basis-1/3">
                 <div @click="showModal = true" class="flex flex-col justify-between items-center cursor-pointer card button-card aspect-square mr-5">
-                    <img src="~/assets/img/icons/plus.png" alt="" width="80px" height="80px">
-                    <p class="w-40 mb-4">Buat Konseling Makro Baru</p>
+                    <img src="~/assets/img/icons/plus.png" alt="" width="50%">
+                    <p class="w-40 mb-4 2xl:text-xl">Buat Konseling Makro Baru</p>
                 </div>
                 <div class="flex-auto card">
                     <p class="card-title">Riwayat Konseling</p>
@@ -21,7 +21,8 @@
             <NearlyKonseling />
             <NearlyKonseling />
         </div>
-        <ModalsNewKonseling v-show="showModal" @close-modal="showModal = false" />
+        <ModalsNewKonseling v-show="showModal" @close-modal="showModal = false" @next-modal="showNextModal" />
+        <ModalsAddFase v-show="nextModal" @close-modal="nextModal = false" @finish="nextModal = false" />
     </div>
 </template>
 
@@ -31,6 +32,13 @@ export default {
     data() {
         return{
             showModal: false,
+            nextModal: false,
+        }
+    },
+    methods: {
+        showNextModal() {
+            this.showModal = false
+            this.nextModal = true
         }
     }
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="flex ml-5 py-2 px-3 button-container items-center cursor-pointer" :style="{backgroundColor:background}">
+    <div @click="$emit('click')" class="flex ml-5 py-2 px-3 button-container items-center cursor-pointer" :style="{backgroundColor:background}">
         <img :src="urlImage" alt="">
         <p class="ml-1 text-xs font-medium text-white">{{content}}</p>
     </div>
