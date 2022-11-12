@@ -1,6 +1,6 @@
 <template>
     <div @click="$emit('click')" class="flex ml-5 py-2 px-3 button-container items-center cursor-pointer" :style="{backgroundColor:background}">
-        <img :src="urlImage" alt="">
+        <img :src="urlImage" alt="" width="18px">
         <p class="ml-1 text-xs font-medium text-white">{{content}}</p>
     </div>
 </template>
@@ -9,7 +9,10 @@
     export default {
         props: {
             urlImage: String,
-            content: String,
+            content: {
+                type: String,
+                default: ""
+            },
             background: String
         }
     }
