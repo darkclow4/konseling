@@ -36,6 +36,9 @@
 </script>
 
 <style lang="scss" scoped>
+table {
+    width: 100%;
+}
 tr {
     border-bottom: 1px solid #D2D2D2;
     border-right: 1px solid #D2D2D2;

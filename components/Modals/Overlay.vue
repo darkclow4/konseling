@@ -21,5 +21,6 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(30, 30, 30, 0.5);
+    z-index: 5;
 }
 </style>

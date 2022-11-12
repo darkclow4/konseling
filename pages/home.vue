@@ -7,20 +7,40 @@
                     <img src="~/assets/img/icons/plus.png" alt="" width="50%">
                     <p class="w-40 mb-4 2xl:text-xl">Buat Konseling Makro Baru</p>
                 </div>
-                <div class="flex-auto card flex-col">
-                    <p class="card-title mb-3">Riwayat Konseling</p>
-                    <TableHistory />
-                </div>
-            </div>
-            <div class="flex basis-2/3 card mt-5 flex-col">
-                <div class="flex justify-between items-center mb-5">
-                    <p class="card-title">Quick Access Konseling</p>
-                    <div class="flex ml-5 items-center search-container">
-                        <img src="~/assets/img/icons/search.png" alt="" width="18px" class="mx-1">
-                        <input type="text" placeholder="Cari Client" class="ml-1 search-text">
+                <div class="flex card flex-col grow justify-between">
+                    <div class="flex flex-col">
+                        <p class="card-title mb-3">Riwayat Konseling</p>
+                        <TableHistory />
+                    </div>
+
+                    <div class="flex justify-end">
+                        <PaginationNumber />
+                        <PaginationNumber />
+                        <PaginationNumber />
+                        <PaginationNumber />
+                        <PaginationNumber />
                     </div>
                 </div>
-                <TableQuick />
+            </div>
+            <div class="flex basis-2/3 card mt-5 flex-col justify-between">
+                <div class="flex flex-col">
+                    <div class="flex justify-between items-center mb-5">
+                        <p class="card-title">Quick Access Konseling</p>
+                        <div class="flex ml-5 items-center search-container">
+                            <img src="~/assets/img/icons/search.png" alt="" width="18px" class="mx-1">
+                            <input type="text" placeholder="Cari Client" class="ml-1 search-text">
+                        </div>
+                    </div>
+                    <TableQuick />
+                </div>
+
+                <div class="flex justify-end">
+                    <PaginationNumber />
+                    <PaginationNumber />
+                    <PaginationNumber />
+                    <PaginationNumber />
+                    <PaginationNumber />
+                </div>
             </div>
         </div>
         <div class="flex flex-col card ml-5 right-div">
@@ -83,7 +103,9 @@ export default {
 
     &:focus {
         outline: none;
-    };
+    }
+
+    ;
 
     &::placeholder {
         color: rgba(30, 30, 30, 0.5);

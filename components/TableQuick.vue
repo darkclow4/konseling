@@ -49,6 +49,7 @@ export default {
 table {
     border-spacing: 0;
     border: 1px solid #D2D2D2;
+    width: 100%;
 }
 tr {
     border-bottom: 1px solid #D2D2D2;
