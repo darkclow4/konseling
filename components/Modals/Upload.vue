@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col mr-5 card w-2/5">
+    <div class="flex flex-col mr-5 card" style="width: 21vw;">
         <p class="card-title">Upload File</p>
         <p class="normal-text font-normal">Tambah File atau Link Cloud di sini!</p>
         <div class="my-5 p-5 items-center justify-center flex flex-col upload-container cursor-pointer">

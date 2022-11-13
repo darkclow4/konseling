@@ -14,11 +14,11 @@
                     </div>
 
                     <div class="flex justify-end">
-                        <PaginationNumber />
-                        <PaginationNumber />
-                        <PaginationNumber />
-                        <PaginationNumber />
-                        <PaginationNumber />
+                        <PaginationNumber content="1" active />
+                        <PaginationNumber content="2" />
+                        <PaginationNumber content="3" />
+                        <PaginationNumber content="4" />
+                        <PaginationNumber content="5" />
                     </div>
                 </div>
             </div>
@@ -35,11 +35,11 @@
                 </div>
 
                 <div class="flex justify-end">
-                    <PaginationNumber />
-                    <PaginationNumber />
-                    <PaginationNumber />
-                    <PaginationNumber />
-                    <PaginationNumber />
+                    <PaginationNumber content="1" active />
+                    <PaginationNumber content="2" />
+                    <PaginationNumber content="3" />
+                    <PaginationNumber content="4" />
+                    <PaginationNumber content="5" />
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@
             <NearlyKonseling />
         </div>
         <ModalsNewKonseling v-show="showModal" @close-modal="showModal = false" @next-modal="showNextModal" />
-        <ModalsAddFase v-show="nextModal" @close-modal="nextModal = false" @finish="nextModal = false" />
+        <ModalsAddFase v-show="nextModal" @close-modal="nextModal = false" />
     </div>
 </template>
 

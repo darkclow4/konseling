@@ -3,7 +3,7 @@
         <div class="grow">
             <p class="name">Desa Margaasih Bandung</p>
             <p class="normal-text">Desa Margaasih Kab. Bandung</p>
-            <HomeVisit />
+            <ButtonView content="Home Visit" />
         </div>
         <div class="flex flex-col justify-center">
             <p class="time-remaining">25 hari lagi</p>

@@ -11,7 +11,7 @@
                 <th style="width: 15%;">Fase Selesai</th>
                 <th style="width: 13%">Status Konseling</th>
             </tr>
-            <tr>
+            <tr @click="$emit('click')">
                 <td>
                     <p>Mariansyah</p>
                     <p>Gilang</p>
@@ -27,6 +27,10 @@
                     <ButtonView content="Fase2" />
                     <ButtonView content="Fase3" />
                     <ButtonView content="Fase4" />
+                    <ButtonView content="Fase5" />
+                    <ButtonView content="Fase6" />
+                    <ButtonView content="Fase7" />
+                    <ButtonView content="Fase8" />
                 </td>
                 <td>
                     <ButtonView content="Selesai" />
@@ -96,19 +100,7 @@ td {
     padding-right: 10px;
 }
 
-th:first-of-type {
-    border-top-left-radius: 10px;
-}
-
-th:last-of-type {
-    border-top-right-radius: 10px;
-}
-
-tr:last-of-type td:first-of-type {
-    border-bottom-left-radius: 10px;
-}
-
-tr:last-of-type td:last-of-type {
-    border-bottom-right-radius: 10px;
+tr td {
+    cursor: pointer;
 }
 </style>

@@ -1,12 +1,30 @@
 <template>
-    <div class="div-container flex justify-center items-center cursor-pointer py-px">
-        <p>3</p>
+    <div>
+        <p class="div-container flex justify-center items-center cursor-pointer py-px" :style="activeNumber">
+            {{content}}
+        </p>
     </div>
 </template>
 
 <script>
     export default {
-        
+        props: {
+            content: String,
+            active: {
+                type: Boolean,
+                default: false,
+            }
+        },
+        computed: {
+            activeNumber(){
+                if(this.active){
+                    return {
+                        backgroundColor: "#1E1E1E",
+                        color: "#FFFFFF"
+                    }
+                }
+            }
+        }
     }
 </script>
 

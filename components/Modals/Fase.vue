@@ -8,22 +8,22 @@
                 <p class="label-font">Selasa, 04 Oktober 2022 - 10:23</p>
                 <p class="label-font">Desa Margaasih 19 Kab. Bandung 40002</p>
             </div>
-            <img @click="$emit('close-modal')" src="~/assets/img/icons/close.png" alt=""
+            <img @click="closeModal" src="~/assets/img/icons/close.png" alt=""
                 class="cursor-pointer aspect-square" width="30px">
         </div>
 
         <div class="input-container">
             <p class="label-font">Isi Interview</p>
-            <textarea type="text" placeholder="Isi Interview di sini!" rows="8"></textarea>
+            <textarea type="text" placeholder="Isi Interview di sini!" rows="8" :disabled="view">{{datajson.isi}}</textarea>
         </div>
 
         <div class="input-container">
             <p class="label-font">Perasaan Client</p>
-            <textarea type="text" placeholder="Isi Perasaan Client di sini" rows="4"></textarea>
+            <textarea type="text" placeholder="Isi Perasaan Client di sini" rows="4" :disabled="view">{{datajson.perasaan}}</textarea>
         </div>
 
-        <div class="flex justify-end">
-            <button class="btn mr-5 py-2" style="background-color: white; color: #1E1E1E">Draft</button>
+        <div v-show="!view" class="flex justify-end">
+            <button class="btn mr-5 py-2" style="background-color: white; color: #1E1E1E" @click="$emit('draft')">Draft</button>
             <button class="btn py-2" @click="increment">{{nextButton}}</button>
         </div>
     </div>
@@ -31,8 +31,18 @@
 
 <script>
 export default {
+    data(){
+        return{
+            datajson: this.dataKonseling? this.dataKonseling: "",
+        }
+    },
     props: {
         fase: Number,
+        dataKonseling: Object,
+        view: {
+            type: Boolean,
+            default: false
+        }
     },
     methods: {
         increment() {
@@ -41,7 +51,9 @@ export default {
             } else {
                 this.$emit('finish')
             }
-            
+        },
+        closeModal(){
+            this.view ? this.$emit('close-modal') : this.$emit('draft')
         }
     },
     computed: {

@@ -12,11 +12,12 @@
                     content="Buat Konseling Makro Baru!" background="#1E1E1E"  />
             </div>
             <div class="flex-auto table-container">
-                <TableKonseling />
+                <TableKonseling @click="viewModal = true" />
             </div>
         </div>
         <ModalsNewKonseling v-show="showModal" @close-modal="showModal = false" @next-modal="showNextModal" />
-        <ModalsAddFase v-show="nextModal" @close-modal="nextModal = false" @finish="nextModal = false" />
+        <ModalsAddFase v-show="nextModal" @close-modal="nextModal = false" />
+        <ModalsViewFase v-show="viewModal" @close-modal="viewModal = false" />
     </div>
 </template>
 
@@ -27,6 +28,7 @@ export default {
         return {
             showModal: false,
             nextModal: false,
+            viewModal: false
         }
     },
     methods: {
