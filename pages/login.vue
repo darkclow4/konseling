@@ -6,9 +6,10 @@
             Silahkan login menggunakan akun E-Konseling anda!
         </p>
         <form>
-            <input type="email" class="form-input" placeholder="Username">
-            <input type="password" class="form-input" placeholder="Password">
-            <button type="submit" class="form-btn" @click.prevent="toRole">Login</button>
+            <p v-show="error" class="error">{{errorMsg}}</p>
+            <input type="email" class="form-input" placeholder="Username" v-model="username" required>
+            <input type="password" class="form-input" placeholder="Password" v-model="password" required>
+            <button type="submit" class="form-btn" @click.prevent="authLogin">Login</button>
         </form>
         <p class="font-medium mb-3" style="font-size: 11px; color: rgba(30, 30, 30, 0.3);">Belum punya akun?</p>
         <button class="btn-contact">
@@ -21,9 +22,26 @@
 <script>
 export default {
   layout: 'login_bg',
+  data(){
+    return{
+        username: "",
+        password: "",
+        error: false,
+        errorMsg: ""
+    }
+  },
   methods: {
     toRole() {
         this.$router.push('/role')
+    },
+    authLogin () {
+        const user = JSON.parse(localStorage.getItem("data")).user[0]
+        if(user.username == this.username && user.password == this.password){
+            this.toRole()
+        } else {
+            this.error = true
+            this.errorMsg = this.username == user.username ? "Password tidak sesuai" : "Username salah"
+        }
     }
   }
 }
@@ -83,5 +101,15 @@ $mediumFont: 14px;
 
 .btn-contact:hover {
     background-color: rgba(30, 30, 30, 0.5);
+}
+
+.error {
+    font-size: $mediumFont;
+    font-weight: 500;
+    background-color: rgb(216, 44, 44);
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 15px;
 }
 </style>

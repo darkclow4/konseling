@@ -12,8 +12,27 @@
 </template>
 
 <script>
+
 export default {
-  layout: "login_bg"
+  layout: "login_bg",
+  mounted() {
+    const datajson = {
+      user: [
+          {
+            id: 1,
+            username: "testing",
+            password: "testing"
+          }
+        ]
+    }
+    const dataStorage = JSON.parse(localStorage.getItem("data"))
+    
+    if(dataStorage){
+      console.log(dataStorage.user[0].username)
+    } else {
+      localStorage.setItem("data", JSON.stringify(datajson))
+    }
+  }
 }
 </script>
 
