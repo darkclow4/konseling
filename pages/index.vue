@@ -25,12 +25,12 @@ export default {
           }
         ]
     }
-    const dataStorage = JSON.parse(localStorage.getItem("data"))
+    const dataStorage = JSON.parse(localStorage.getItem("datakonseling"))
     
     if(dataStorage){
       console.log(dataStorage.user[0].username)
     } else {
-      localStorage.setItem("data", JSON.stringify(datajson))
+      localStorage.setItem("datakonseling", JSON.stringify(datajson))
     }
   }
 }

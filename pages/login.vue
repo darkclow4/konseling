@@ -35,7 +35,7 @@ export default {
         this.$router.push('/role')
     },
     authLogin () {
-        const user = JSON.parse(localStorage.getItem("data")).user[0]
+        const user = JSON.parse(localStorage.getItem("datakonseling")).user[0]
         if(user.username == this.username && user.password == this.password){
             this.toRole()
         } else {
