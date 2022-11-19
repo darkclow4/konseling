@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fkonseling\u002F_nuxt\u002Fstatic\u002F1668870665",layout:"login_bg",error:a,serverRendered:true,routePath:"\u002F",config:{_app:{basePath:"\u002Fkonseling\u002F",assetsPath:"\u002Fkonseling\u002F_nuxt\u002F",cdnURL:a}}}}(null));
