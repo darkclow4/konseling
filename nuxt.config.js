@@ -1,8 +1,8 @@
 export default {
   target: 'static',
-  router: {
-    base: '/konseling/'
-  },
+  // router: {
+  //   base: '/konseling/'
+  // },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'front-konseling',
@@ -17,7 +17,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,600&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap' }
     ]
   },
 

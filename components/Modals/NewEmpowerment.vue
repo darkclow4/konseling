@@ -1,6 +1,6 @@
 <template>
     <ModalsOverlay>
-        <div class="card" style="width: 330px;">
+        <div class="card" style="width: 340px;">
             <div class="flex items-start justify-between">
                 <div class="flex flex-col mb-5">
                     <p class="card-title">Buat Empowerment Baru</p>
@@ -10,37 +10,23 @@
             </div>
 
             <div class="input-container">
-                <p class="label-font">Nama Client *</p>
-                <input type="text" placeholder="Isi Nama Client">
+                <p class="label-font">Sasaran Perubahan <span class="red-text">*</span></p>
+                <input type="text" placeholder="Isi Sasaran Perubahan">
             </div>
 
             <div class="input-container">
-                <p class="label-font">Nama Konselor * 
+                <p class="label-font">Nama Fasilitator <span class="red-text">*</span> 
                     <span class="italic" style="font-size: 9px; color: rgba(30, 30, 30, 0.3);">
-                        (Maksimal 5 orang)
+                        (Maksimal 15 orang)
                     </span>
                 </p>
-                <input type="text" placeholder="Isi Nama Konselor">
+                <input type="text" placeholder="Isi Nama Fasilitator">
             </div>
 
             <div class="input-container">
-                <p class="label-font">Jenis Lokasi Konseling</p>
-                <input type="text" value="HOME VISIT" disabled style="color: #1E1E1E;">
-            </div>
-
-
-            <div class="input-container">
-                <p class="label-font">Lokasi Konseling *</p>
-                <textarea type="text" placeholder="Isi Lokasi Konseling" rows="3"></textarea>
-            </div>
-
-            <div class="input-container">
-                <p class="label-font">Sediakan Upload Rekaman</p>
-                <select style="color: #1E1E1E;">
-                    <option>YA</option>
-                    <option>TIDAK</option>
-                </select>
-                <p class="label-font mt-1.5" style="color: #FE5F55;">* Wajib diisi</p>
+                <p class="label-font">Lokasi Sasaran Perubahan <span class="red-text">*</span></p>
+                <textarea type="text" placeholder="Isi Lokasi Sasaran Perubahan" rows="3"></textarea>
+                <p class="label-font mt-1.5 red-text italic">* Wajib diisi</p>
             </div>
 
             <button @click="$emit('next-modal')" class="btn mx-auto">Buat Konseling</button>
@@ -94,5 +80,9 @@ input, select, textarea {
         size: 12px;
         weight: 500;
     }
+}
+
+.red-text {
+    color: #FE5F55;
 }
 </style>

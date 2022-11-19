@@ -2,7 +2,7 @@
     <div class="inline-flex m-px">
         <div class="flex items-center container-card w-fit p-1" :style="{ backgroundColor: background }">
             <p class="container-text">{{ content }}</p>
-            <img v-show="showImg" src="~/assets/img/icons/check.png" width="30%" class="ml-1" />
+            <img v-if="showImg" src="~/assets/img/icons/check.png" width="30%" class="ml-1" />
         </div>
     </div>
 </template>
@@ -28,6 +28,7 @@ export default {
                     return "#F8C43A"
                     break;
                 default:
+                    return "#1E1E1E"
                     break;
             }
         },

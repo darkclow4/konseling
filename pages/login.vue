@@ -9,7 +9,7 @@
             <p v-show="error" class="error">{{errorMsg}}</p>
             <input type="email" class="form-input" placeholder="Username" v-model="username" required>
             <input type="password" class="form-input" placeholder="Password" v-model="password" required>
-            <button type="submit" class="form-btn" @click.prevent="authLogin">Login</button>
+            <button type="submit" class="form-btn" @click.prevent="toRole">Login</button>
         </form>
         <p class="font-medium mb-3" style="font-size: 11px; color: rgba(30, 30, 30, 0.3);">Belum punya akun?</p>
         <button class="btn-contact">

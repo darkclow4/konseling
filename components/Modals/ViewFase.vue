@@ -7,7 +7,7 @@
                 <ModalsComment />
             </div>
             <div class="flex mt-5 justify-center">
-                <button v-for="n in 8" @click="clickFase(n)" :class="{'active': n == active}" >Fase {{n}}</button>
+                <button v-for="n in 7" @click="clickFase(n)" :class="{'active': n == active}" >Fase {{n}}</button>
             </div>
         </div>
     </ModalsOverlay>

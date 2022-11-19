@@ -8,7 +8,7 @@
     export default {
         computed: {
             title(){
-                return this.$route.name === "home" ? "Dashboard" : "Daftar Konseling";
+                return this.$route.name === "home" ? "Dashboard" : "Community Empowerment";
             }
         }
     }

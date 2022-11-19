@@ -21,7 +21,20 @@ export default {
           {
             id: 1,
             username: "testing",
-            password: "testing"
+            password: "testing",
+            role: "mahasiswa"
+          },
+          {
+            id: 2,
+            username: "supervisor",
+            password: "supervisor",
+            role: "supervisor",
+          },
+          {
+            id: 3,
+            username: "admin",
+            password: "admin",
+            role: "admin"
           }
         ]
     }

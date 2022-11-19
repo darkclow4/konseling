@@ -4,7 +4,7 @@
             <div class="flex flex-col mb-5 mr-5">
                 <p class="card-title">Fase {{fase}}: {{textFase}}</p>
                 <p class="label-font">Desa Margaasih Kabupaten Bandung</p>
-                <p class="label-font">Home Visit</p>
+                <p class="label-font">Community Empowerment</p>
                 <p class="label-font">Selasa, 04 Oktober 2022 - 10:23</p>
                 <p class="label-font">Desa Margaasih 19 Kab. Bandung 40002</p>
             </div>
@@ -13,13 +13,13 @@
         </div>
 
         <div class="input-container">
-            <p class="label-font">Isi Interview</p>
-            <textarea type="text" placeholder="Isi Interview di sini!" rows="8" :disabled="view">{{datajson.isi}}</textarea>
+            <p class="label-font">Resume</p>
+            <textarea type="text" placeholder="Isi Resume di sini!" rows="8" :disabled="view">{{datajson.isi}}</textarea>
         </div>
 
         <div class="input-container">
-            <p class="label-font">Perasaan Client</p>
-            <textarea type="text" placeholder="Isi Perasaan Client di sini" rows="4" :disabled="view">{{datajson.perasaan}}</textarea>
+            <p class="label-font">Refleksi Fasilitator</p>
+            <textarea type="text" placeholder="Isi Refleksi Fasilitator di sini!" rows="4" :disabled="view">{{datajson.perasaan}}</textarea>
         </div>
 
         <div v-show="!view" class="flex justify-end">
@@ -46,7 +46,7 @@ export default {
     },
     methods: {
         increment() {
-            if(this.fase < 8) {
+            if(this.fase < 7) {
                 this.$emit('increment')
             } else {
                 this.$emit('finish')
@@ -58,7 +58,7 @@ export default {
     },
     computed: {
         nextButton() {
-            return this.fase == 8 ? "Selesai" : "Selanjutnya"
+            return this.fase == 7 ? "Selesai" : "Selanjutnya"
         },
         textFase () {
             switch(this.fase) {
@@ -66,24 +66,21 @@ export default {
                     return "Persiapan Awal"
                     break
                 case 2:
-                    return "Inisialisasi Sosial"
+                    return "Inisiasi Sosial"
                     break
                 case 3:
                     return "Asesmen Sosial"
                     break
                 case 4:
-                    return "Perencanaan Sosial"
+                    return "Perencanaan Intervensi"
                     break
                 case 5:
-                    return "Intervensi Sosial"
+                    return "Intervensi"
                     break
                 case 6:
-                    return "Peran Pekerja Sosial"
+                    return "Monitoring & Evaluasi"
                     break
                 case 7:
-                    return "Moneva Sosial"
-                    break
-                case 8:
                     return "Terminasi & Rujukan"
                     break
                 default:

@@ -3,25 +3,23 @@
         <div class="header-background absolute top-0 left-0 right-0"></div>
         <table class="relative">
             <tr>
-                <th>Konselor</th>
-                <th style="width: 13%">Client</th>
+                <th>Fasilitator</th>
+                <th style="width: 18%">Sasaran Perubahan</th>
                 <th style="width: 15%">Waktu Wawancara</th>
-                <th style="width: 12%">Lokasi Konseling</th>
-                <th style="width: 10%">Jenis Lokasi</th>
+                <th style="width: 17%">Lokasi</th>
                 <th style="width: 15%;">Fase Selesai</th>
-                <th style="width: 13%">Status Konseling</th>
+                <th style="width: 10%">Status</th>
             </tr>
             <tr @click="$emit('click')">
                 <td>
-                    <p>Mariansyah</p>
-                    <p>Gilang</p>
+                    <ButtonView content="Helmi Ilham Fauzi" />
+                    <ButtonView content="Hamzah Fatah" />
+                    <ButtonView content="Rahmat Mandala" />
+                    <ButtonView content="Ghaza Supratna" />
                 </td>
                 <td>Desa Margaasih Bandung</td>
                 <td>Minggu, 30 Okt 2022 10:00</td>
                 <td>Desa Margaasih 19 Kab. Bandung 40002</td>
-                <td>
-                    <ButtonView content="Home Visit" />
-                </td>
                 <td>
                     <ButtonView content="Fase1" />
                     <ButtonView content="Fase2" />
@@ -37,13 +35,15 @@
                 </td>
             </tr>
             <tr>
-                <td>Mariansyah</td>
+                <td>
+                    <ButtonView content="Helmi Ilham Fauzi" />
+                    <ButtonView content="Hamzah Fatah" />
+                    <ButtonView content="Rahmat Mandala" />
+                    <ButtonView content="Ghaza Supratna" />
+                </td>
                 <td>Desa Margaasih Bandung</td>
                 <td>Minggu, 30 Okt 2022 10:00</td>
                 <td>Desa Margaasih 19 Kab. Bandung 40002</td>
-                <td>
-                    <ButtonView content="Home Visit" />
-                </td>
                 <td>
                     <ButtonView content="Fase1" />
                     <ButtonView content="Fase2" />

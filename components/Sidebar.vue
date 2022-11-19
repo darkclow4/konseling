@@ -3,10 +3,10 @@
         <div class="flex-col">
             <div class="sidebar-title">
                 <a href="/" class="text-white no-underline font-semibold">
-                    E-Konseling
+                    E-Community Empowerment
                 </a>
             </div>
-            <hr class="mt-5">
+            <hr>
         </div>
         <div class="flex flex-col justify-between grow mb-3 mt-4">
             <ul class="flex-col mt-4">
@@ -19,7 +19,7 @@
                 <li class="sidebar-li flex flex-row">
                     <NuxtLink to="/konseling" class="w-full flex items-center py-3">
                         <img src="~/assets/img/icons/analytics.png" alt="" class="ml-4">
-                        <span class="link-text">Konseling</span>
+                        <span class="link-text">Community Empowerment</span>
                     </NuxtLink>
                 </li>
             </ul>
