@@ -16,6 +16,8 @@ export default {
         background() {
             if (this.content.includes("Fase")) {
                 return "#492B7B"
+            } else if (this.content.includes("E Konseling") || this.content.includes("E Community")) {
+                return "#0C9CEE"
             }
             switch (this.content) {
                 case "Home Visit":
@@ -26,6 +28,9 @@ export default {
                     break;
                 case "Draft":
                     return "#F8C43A"
+                    break;
+                case "Admin":
+                    return "#EE712B"
                     break;
                 default:
                     return "#1E1E1E"

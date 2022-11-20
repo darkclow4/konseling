@@ -3,13 +3,33 @@
         <div class="flex-col">
             <div class="sidebar-title">
                 <a href="/" class="text-white no-underline font-semibold">
-                    E-Community Empowerment
+                    {{sidebarList.title}}
                 </a>
             </div>
             <hr>
         </div>
         <div class="flex flex-col justify-between grow mb-3 mt-4">
-            <ul class="flex-col mt-4">
+            <ul v-if="admin" class="flex-col mt-4">
+                <li class="sidebar-li flex flex-row mb-3">
+                    <NuxtLink to="/admin" class="w-full flex items-center py-3">
+                        <img src="~/assets/img/icons/two people.svg" alt="" class="ml-5 mr-1">
+                        <span class="link-text">Konselor</span>
+                    </NuxtLink>
+                </li>
+                <li class="sidebar-li flex flex-row mb-3">
+                    <NuxtLink to="/admin/supervisor" class="w-full flex items-center py-3">
+                        <img src="~/assets/img/icons/many people.svg" alt="" class="ml-4">
+                        <span class="link-text">Supervisor</span>
+                    </NuxtLink>
+                </li>
+                <li class="sidebar-li flex flex-row mb-3">
+                    <NuxtLink to="/admin/administrator" class="w-full flex items-center py-3">
+                        <img src="~/assets/img/icons/admin.svg" alt="" class="ml-4">
+                        <span class="link-text">Administrator</span>
+                    </NuxtLink>
+                </li>
+            </ul>
+            <ul v-else class="flex-col mt-4">
                 <li class="sidebar-li flex flex-row mb-3">
                     <NuxtLink to="/home" class="w-full flex items-center py-3">
                         <img src="~/assets/img/icons/dashboard.png" alt="" class="ml-5 mr-1">
@@ -43,6 +63,31 @@
 
 <script>
 export default {
+    data(){
+        return {
+            admin: false
+        }
+    },
+    computed: {
+        sidebarList(){
+            if(this.$route.name.includes("admin")) {
+                this.admin = true
+                return {
+                    title: "Manage User",
+                    list: [
+                        {
+                            url: "~/assets/img/icons/two people.svg"
+                        }
+                    ]
+                }
+            } else {
+                this.admin = false
+                return {
+                    title: "E-Community Empowerment"
+                }
+            }
+        }
+    },
     methods:{
         toLogin() {
             this.$router.push('/login')
@@ -85,7 +130,7 @@ export default {
     color: white;
 }
 
-.nuxt-link-active {
+.nuxt-link-exact-active {
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     color: white;

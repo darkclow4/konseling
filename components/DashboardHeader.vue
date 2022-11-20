@@ -8,7 +8,17 @@
     export default {
         computed: {
             title(){
-                return this.$route.name === "home" ? "Dashboard" : "Community Empowerment";
+                const routeName = this.$route.name
+                if(routeName.includes("admin")){
+                    if(routeName.includes("supervisor")){
+                        return "Supervisor"
+                    } else if (routeName.includes("administrator")) {
+                        return "Administrator"
+                    } else {
+                        return "Konselor"
+                    }
+                }
+                return routeName === "home" ? "Dashboard" : "Community Empowerment";
             }
         }
     }
