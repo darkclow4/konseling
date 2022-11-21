@@ -23,7 +23,7 @@
                     </td>
                     <td>12 Desember 2023</td>
                     <td>
-                        <button class="edit-btn"><img src="~/assets/img/icons/edit.svg" width="18px"></button>
+                        <button class="edit-btn" @click="$emit('click-edit')"><img src="~/assets/img/icons/edit.svg" width="18px"></button>
                         <button class="delete-btn"><img src="~/assets/img/icons/delete.png" width="18px"></button>
                     </td>
                 </tr>
@@ -36,7 +36,7 @@
                     </td>
                     <td>12 Desember 2023</td>
                     <td>
-                        <button class="edit-btn"><img src="~/assets/img/icons/edit.svg" width="18px"></button>
+                        <button class="edit-btn" @click="$emit('click-edit')"><img src="~/assets/img/icons/edit.svg" width="18px"></button>
                         <button class="delete-btn"><img src="~/assets/img/icons/delete.png" width="18px"></button>
                     </td>
                 </tr>

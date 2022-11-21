@@ -10,17 +10,25 @@
             <ButtonComponent :url-image="require('~/assets/img/icons/import.svg')" content="Impor Data"
                 background="#35D0BA" />
             <ButtonComponent :url-image="require('~/assets/img/icons/add.svg')" content="Tambah Konselor"
-                background="#0C9CEE" />
+                background="#0C9CEE" @click="addModal = true" />
         </div>
         <div class="table-container grow">
-            <TablesAdminKonselor />
+            <TablesAdminKonselor @click-edit="editModal = true" />
         </div>
+        <ModalsAdminAdd v-show="addModal" @close-modal="addModal = false" />
+        <ModalsAdminEdit v-show="editModal" @close-modal="editModal = false" />
     </div>
 </template>
 
 <script>
 export default {
-    layout: "dashboard"
+    layout: "dashboard",
+    data(){
+        return{
+            addModal:false,
+            editModal: false
+        }
+    }
 }
 </script>
 
